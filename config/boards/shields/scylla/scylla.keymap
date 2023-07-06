@@ -30,7 +30,7 @@
     ZMK_MACRO(wpr,
       wait-ms = <30>;
       tap-ms = <40>;
-      bindings = <&macro_press &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL>, <&macro_tap &kp Z>, <&macro_release &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL>;
+      bindings = <&macro_press &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LSHIFT &kp LGUI &kp LALT &kp LCTRL>;
     )
   };
 
