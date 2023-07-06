@@ -12,6 +12,11 @@
       tap-ms = <40>;
       bindings = <&macro_press &kp LGUI &kp LSHIFT>, <&macro_tap &kp N4>, <&macro_release &kp LSHIFT &kp LGUI>;
     )
+    ZMK_MACRO(capture_screen,
+      wait-ms = <30>;
+      tap-ms = <40>;
+      bindings = <&macro_press &kp LGUI &kp LSHIFT>, <&macro_tap &kp N5>, <&macro_release &kp LSHIFT &kp LGUI>;
+    )
     ZMK_MACRO(change_window,
       wait-ms = <30>;
       tap-ms = <40>;
@@ -52,12 +57,12 @@
     // TODO: Add nav-keys on this layer
     NAV {
       bindings = <
-      &none           &none   &none         &none          &none         &bootloader   &bootloader   &none    &none    &none      &none  &kp DEL
-      &trans          &none   &none         &kp C_BRI_DN   &kp C_BRI_UP  &kp K_VOL_UP  &none         &none    &kp UP   &none      &none  &none
-      &trans          &none   &kp K_PREV    &kp C_PP       &kp K_NEXT    &kp K_VOL_DN  &none         &kp LEFT &kp DOWN &kp RIGHT  &none  &none
-      &change_window  &none   &wpl          &wpf           &wpr          &kp K_MUTE    &none         &none    &none    &none      &none  &none
-                                            &trans         &trans        &trans        &none         &none    &none
-                                                           &trans        &trans        &none         &trans
+      &none           &none   &none         &none          &none         &bootloader   &bootloader     &none    &none    &none      &none  &kp DEL
+      &trans          &none   &none         &kp C_BRI_DN   &kp C_BRI_UP  &kp K_VOL_UP  &screenshot     &none    &kp UP   &none      &none  &none
+      &trans          &none   &kp K_PREV    &kp C_PP       &kp K_NEXT    &kp K_VOL_DN  &capture_screen &kp LEFT &kp DOWN &kp RIGHT  &none  &none
+      &change_window  &none   &wpl          &wpf           &wpr          &kp K_MUTE    &none           &none    &none    &none      &none  &none
+                                            &trans         &trans        &trans        &none           &none    &none
+                                                           &trans        &trans        &none           &trans
       >;
     };
   };
