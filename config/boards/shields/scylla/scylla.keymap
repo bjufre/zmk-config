@@ -3,7 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define NAV 1
+#define SYM 1
+#define NAV 2
 
 / {
   macros {
@@ -45,22 +46,34 @@
     // TODO: Add Switch to NAV-layer on this half
     DEF {
       bindings = <
-      &kp GRAVE      &kp N1 &kp N2 &kp N3  &kp N4     &kp N5         &kp N6        &kp N7         &kp N8    &kp N9  &kp N0       &kp BSPC
-      &kp TAB        &kp Q  &kp W  &kp F   &kp P      &kp B          &kp J         &kp L          &kp U     &kp Y   &kp LBKT     &kp RBKT
-      &kp ESC        &kp A  &kp R  &kp S   &kp T      &kp G          &kp M         &kp N          &kp E     &kp I   &kp O        &kp SQT
-      &kp LSHIFT     &kp Z  &kp X  &kp C   &kp D      &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH    &kp BSLH
-                                   &mo NAV &kp LSHIFT &kp LGUI       &kp ENTER     &kp SPACE      &kp MINUS
-                                           &kp LCTRL  &kp LALT       &kp SEMI      &kp EQUAL
+      &kp GRAVE      &kp N1 &kp N2 &kp N3     &kp N4     &kp N5         &kp N6        &kp N7         &kp N8    &kp N9  &kp N0       &kp BSPC
+      &kp TAB        &kp Q  &kp W  &kp F      &kp P      &kp B          &kp J         &kp L          &kp U     &kp Y   &kp SEMI     &kp DEL
+      &kp ESC        &kp A  &kp R  &kp S      &kp T      &kp G          &kp M         &kp N          &kp E     &kp I   &kp O        &kp SQT
+      &kp LSHIFT     &kp Z  &kp X  &kp C      &kp D      &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH    &kp BSLH
+                                   &kp LSHIFT &kp LGUI   &mo SYM        &kp ENTER     &kp SPACE      &kp MINUS
+                                              &kp LCTRL  &kp LALT       &mo NAV       &none
+      >;
+    };
+
+    // TODO: Add nav-keys on this layer
+    SYM {
+      bindings = <
+      &kp GRAVE     &kp EXCL &kp AT &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET     &kp AMPS       &kp STAR     &kp LPAR     &kp RPAR  &kp BSPC
+      &none         &none    &none  &none      &none      &none            &none         &kp LS(LBKT)   &kp LS(RBKT) &kp KP_MINUS &kp SEMI  &kp DEL
+      &none         &none    &none  &none      &none      &none            &kp TILDE     &kp LBKT       &kp RBKT     &kp UNDER    &none     &none
+      &kp LSHIFT    &none    &none  &none      &none      &none            &kp GRAVE     &kp EQUAL      &kp COMMA    &kp DOT      &none     &none
+                                   &trans      &trans     &trans           &trans        &kp SPACE      &trans
+                                               &trans     &trans           &trans        &trans
       >;
     };
 
     // TODO: Add nav-keys on this layer
     NAV {
       bindings = <
-      &none           &none   &none         &none          &none         &bootloader   &bootloader     &none    &none    &none      &none  &kp DEL
-      &trans          &none   &none         &kp C_BRI_DN   &kp C_BRI_UP  &kp C_VOL_UP  &screenshot     &none    &kp UP   &none      &none  &none
-      &trans          &none   &kp K_PREV    &kp C_PP       &kp K_NEXT    &kp C_VOL_DN  &capture_screen &kp LEFT &kp DOWN &kp RIGHT  &none  &none
-      &trans          &none   &wpl          &wpf           &wpr          &kp K_MUTE    &none           &none    &none    &none      &none  &none
+      &none           &none   &none         &none          &none         &bootloader   &bootloader     &none            &none       &none       &none  &none
+      &trans          &none   &none         &kp C_BRI_DN   &kp C_BRI_UP  &kp C_VOL_UP  &screenshot     &none            &kp UP      &none       &none  &none
+      &trans          &none   &kp K_PREV    &kp C_PP       &kp K_NEXT    &kp C_VOL_DN  &capture_screen &kp LEFT         &kp DOWN    &kp RIGHT   &none  &none
+      &trans          &none   &wpl          &wpf           &wpr          &kp K_MUTE    &none           &none    &none   &none       &none  &none
                                             &trans         &trans        &trans        &none           &none    &none
                                                            &trans        &trans        &none           &trans
       >;
