@@ -49,8 +49,8 @@
       &kp TAB        &kp Q  &kp W  &kp F      &kp P      &kp B          &kp J         &kp L          &kp U     &kp Y   &kp SEMI     &kp MINUS
       &kp LSHIFT     &kp A  &kp R  &kp S      &kp T      &kp G          &kp M         &kp N          &kp E     &kp I   &kp O        &kp SQT
       &mo NAV        &kp Z  &kp X  &kp C      &kp D      &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH    &kp BSLH
-                                   &kp LGUI   &mo SYM    &kp LCTRL      &kp ENTER     &kp SPACE      &kp ESC
-                                              &kp DEL    &kp LALT       &mo NAV       &none
+                                   &kp LGUI   &mo SYM    &kp LCTRL      &kp LSHIFT     &kp SPACE      &kp ESC
+                                              &kp DEL    &kp LALT       &kp ENTER       &mo NAV
       >;
     };
 
@@ -70,8 +70,8 @@
       &none           &none   &none         &none          &none         &bootloader   &bootloader     &none            &none       &none       &none  &none
       &trans          &none   &none         &kp C_BRI_DN   &kp C_BRI_UP  &kp C_VOL_UP  &screenshot     &none            &kp UP      &none       &none  &none
       &trans          &none   &kp K_PREV    &kp C_PP       &kp K_NEXT    &kp C_VOL_DN  &capture_screen &kp LEFT         &kp DOWN    &kp RIGHT   &none  &none
-      &bt BT_CLR      &none   &wpl          &wpf           &wpr          &kp K_MUTE    &none           &none    &none   &none       &none  &none
-                                            &trans         &trans        &trans        &none           &none    &none
+      &trans          &none   &wpl          &wpf           &wpr          &kp K_MUTE    &none           &none    &none   &none       &none  &none
+                                            &trans         &trans        &trans        &bt BT_CLR      &none    &none
                                                            &trans        &trans        &none           &trans
       >;
     };
