@@ -6,7 +6,21 @@
 #define SYM 1
 #define NAV 2
 
+#define AS(keycode) &as LS(keycode) keycode
+
 / {
+  behaviors {
+    as: auto_shift {
+      compatible = "zmk,behavior-hold-tap";
+      label = "AUTO_SHIFT";
+      #binding-cells = <2>;
+      tapping_term_ms = <135>;
+      quick_tap_ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
+
   macros {
     ZMK_MACRO(screenshot,
       wait-ms = <30>;
@@ -49,7 +63,7 @@
       &kp TAB        &kp Q  &kp W  &kp F      &kp P      &kp B          &kp J         &kp L          &kp U     &kp Y   &kp SEMI     &kp MINUS
       &kp LSHIFT     &kp A  &kp R  &kp S      &kp T      &kp G          &kp M         &kp N          &kp E     &kp I   &kp O        &kp SQT
       &kp LCTRL      &kp Z  &kp X  &kp C      &kp D      &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH    &kp BSLH
-                                   &kp LGUI   &mo SYM    &kp LSHIFT     &kp ENTER     &kp SPACE      &kp ESC
+                                   &kp LGUI   &kp LSHIFT &mo SYM        &kp ENTER     &kp SPACE      &kp ESC
                                               &kp LCTRL  &kp LALT       &mo NAV       &kp DEL
       >;
     };
@@ -58,8 +72,8 @@
       bindings = <
       &kp GRAVE     &kp EXCL &kp AT &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET     &kp AMPS       &kp STAR     &kp LPAR     &kp RPAR  &kp BSPC
       &none         &none    &none  &none      &none      &none            &none         &kp LS(LBKT)   &kp LS(RBKT) &kp KP_MINUS &kp SEMI  &kp BSLH
-      &none         &none    &none  &none      &none      &none            &kp TILDE     &kp LBKT       &kp RBKT     &kp UNDER    &none     &kp SQT
-      &kp LSHIFT    &none    &none  &none      &none      &bootloader      &kp GRAVE     &kp EQUAL      &kp COMMA    &kp DOT      &none     &none
+      &trans        &none    &none  &none      &none      &none            &kp TILDE     &kp LBKT       &kp RBKT     &kp UNDER    &none     &kp SQT
+      &trans        &none    &none  &none      &none      &bootloader      &kp GRAVE     &kp EQUAL      &kp COMMA    &kp DOT      &none     &none
                                    &trans      &trans     &trans           &trans        &kp SPACE      &trans
                                                &trans     &trans           &trans        &trans
       >;
