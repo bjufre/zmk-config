@@ -71,9 +71,9 @@
     SYM {
       bindings = <
       &kp GRAVE     &kp EXCL &kp AT &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET     &kp AMPS       &kp STAR     &kp LPAR     &kp RPAR  &kp BSPC
-      &none         &none    &none  &none      &none      &none            &none         &kp LS(LBKT)   &kp LS(RBKT) &kp KP_MINUS &kp SEMI  &kp BSLH
-      &trans        &none    &none  &none      &none      &none            &kp TILDE     &kp LBKT       &kp RBKT     &kp UNDER    &none     &kp SQT
-      &trans        &none    &none  &none      &none      &none            &kp GRAVE     &kp EQUAL      &kp COMMA    &kp DOT      &none     &none
+      &none         &none    &none  &none      &none      &none            &none         &kp LS(LBKT)   &kp LS(RBKT) &kp BSLH     &kp SEMI  &kp MINUS
+      &trans        &none    &none  &none      &none      &none            &kp TILDE     &kp LBKT       &kp RBKT     &kp MINUS    &none     &kp SQT
+      &trans        &none    &none  &none      &none      &none            &kp GRAVE     &kp EQUAL      &kp COMMA    &kp DOT      &none     &kp BSLH
                                    &trans      &trans     &trans           &trans        &kp SPACE      &trans
                                                &trans     &trans           &trans        &trans
       >;
