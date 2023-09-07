@@ -63,7 +63,7 @@
       &lt NAV TAB     &kp Q  &kp W  &kp F      &kp P      &kp B          &kp J         &kp L          &kp U        &kp Y   &kp SEMI     &kp MINUS
       &mt LSHIFT ESC  &kp A  &kp R  &kp S      &kp T      &kp G          &kp M         &kp N          &kp E        &kp I   &kp O        &kp SQT
       &mo SYM         &kp Z  &kp X  &kp C      &kp D      &kp V          &kp K         &kp H          &kp COMMA    &kp DOT &kp SLASH    &kp BSLH
-                                    &kp LGUI   &mo SYM    &kp LSHIFT     &kp ENTER     &kp SPACE      &lt SYM ESC
+                                    &kp LGUI   &kp LSHIFT &mo SYM        &kp ENTER     &kp SPACE      &lt SYM ESC
                                                &kp LCTRL  &kp LALT       &mo NAV       &kp DEL
       >;
     };
