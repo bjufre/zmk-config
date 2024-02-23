@@ -66,9 +66,9 @@
       bindings = <
       &kp GRAVE       &kp N1 &kp N2 &kp N3     &kp N4     &kp N5         &kp N6        &kp N7         &kp N8       &kp N9  &kp N0       &kp BSPC
       &lt NAV TAB     &kp Q  &kp W  &kp F      &kp P      &kp B          &kp J         &kp L          &kp U        &kp Y   &kp SEMI     &kp MINUS
-      &kp LCTRL       &kp A  &kp R  &kp S      &kp T      &kp G          &kp M         &kp N          &kp E        &kp I   &kp O        &kp SQT
+      &mo SYM         &kp A  &kp R  &kp S      &kp T      &kp G          &kp M         &kp N          &kp E        &kp I   &kp O        &kp SQT
       &kp LSHIFT      &kp Z  &kp X  &kp C      &kp D      &kp V          &kp K         &kp H          &kp COMMA    &kp DOT &kp SLASH    &kp BSLH
-                                    &kp LGUI   &kp LSHIFT &mo SYM        &kp ENTER     &kp SPACE      &kp ESC
+                                    &kp LGUI   &kp LSHIFT &kp LCTRL      &kp ENTER     &kp SPACE      &kp ESC
                                                &kp LCTRL  &kp LALT       &mo NAV       &kp DEL
       >;
     };
@@ -78,9 +78,9 @@
       &kp GRAVE     &kp EXCL &kp AT &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET     &kp AMPS       &kp STAR     &kp LPAR     &kp RPAR  &kp BSPC
       &none         &none    &none  &none      &none      &none            &none         &kp LS(LBKT)   &kp LS(RBKT) &kp BSLH     &kp SEMI  &kp MINUS
       &trans        &none    &none  &none      &none      &none            &kp TILDE     &kp LBKT       &kp RBKT     &kp MINUS    &none     &kp SQT
-      &trans        &none    &none  &none      &none      &none            &kp GRAVE     &kp EQUAL      &kp COMMA    &kp DOT      &none     &kp BSLH
+      &trans        &none    &none  &none      &none      &none            &kp GRAVE     &kp EQUAL      &kp COMMA    &kp UNDER    &none     &kp BSLH
                                     &trans     &trans     &trans           &trans        &kp SPACE      &trans
-                                               &trans     &kp LSHIFT       &trans        &trans
+                                               &trans     &trans           &trans        &trans
       >;
     };
 
