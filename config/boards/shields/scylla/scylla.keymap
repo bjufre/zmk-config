@@ -7,6 +7,7 @@
 #define SYM 2
 #define NAV 3
 #define QWERTY 4
+#define LQWERTY 5
 
 #define AS(keycode) &as LS(keycode) keycode
 
@@ -74,7 +75,7 @@
       &kp GRAVE       &kp EXCL &kp AT &kp HASH    &kp DLLR      &kp PRCNT       &kp CARET     &kp AMPS       &kp STAR     &kp LPAR     &kp RPAR     &kp BSPC
       &lt NAV TAB     &kp Q    &kp W  &kp F       &kp P         &kp B           &kp J         &kp L          &kp U        &kp Y        &kp SEMI     &kp MINUS
       &mo SYM         &kp A    &kp R  &kp S       &kp T         &kp G           &kp M         &kp N          &kp E        &kp I        &kp O        &kp SQT
-      &kp LSHIFT      &kp Z    &kp X  &kp C       &kp D         &kp V           &kp K         &kp H          &kp COMMA    &kp DOT      &kp SLASH    &none
+      &kp LSHIFT      &kp Z    &kp X  &kp C       &kp D         &kp V           &kp K         &kp H          &kp COMMA    &kp DOT      &kp SLASH    &tog QWERTY
                                       &kp LGUI    &mo LCOLEMAK  &kp LCTRL       &kp ENTER     &kp SPACE      &mt LCTRL ESC
                                                   &mo SYM       &kp LALT        &mo NAV       &kp DEL
       >;
@@ -87,7 +88,7 @@
       &kp LS(GRAVE)    &kp N1      &kp N2      &kp N3         &kp N4          &kp N5          &kp N6        &kp N7         &kp N8         &kp N9       &kp N0         &kp BSPC
       &lt NAV LS(TAB)  &kp LS(Q)   &kp LS(W)   &kp LS(F)      &kp LS(P)       &kp LS(B)       &kp LS(J)     &kp LS(L)      &kp LS(U)      &kp LS(Y)    &kp LS(SEMI)   &kp LS(MINUS)
       &mo SYM          &kp LS(A)   &kp LS(R)   &kp LS(S)      &kp LS(T)       &kp LS(G)       &kp LS(M)     &kp LS(N)      &kp LS(E)      &kp LS(I)    &kp LS(O)      &kp LS(SQT)
-      &trans           &kp LS(Z)   &kp LS(X)   &kp LS(C)      &kp LS(D)       &kp LS(V)       &kp LS(K)     &kp LS(H)      &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &none
+      &trans           &kp LS(Z)   &kp LS(X)   &kp LS(C)      &kp LS(D)       &kp LS(V)       &kp LS(K)     &kp LS(H)      &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &tog QWERTY
                                    &kp LGUI    &trans         &kp LCTRL       &kp ENTER       &kp SPACE     &mt LCTRL ESC
                                                &trans         &kp LALT        &mo NAV         &kp DEL
       >;
@@ -121,8 +122,19 @@
       &lt NAV TAB     &kp Q    &kp W  &kp E      &kp R       &kp T          &kp Y         &kp U          &kp I        &kp O        &kp P        &kp MINUS
       &mo SYM         &kp A    &kp S  &kp D      &kp F       &kp G          &kp H         &kp J          &kp K        &kp L        &kp SEMI     &kp SQT
       &kp LSHIFT      &kp Z    &kp X  &kp C      &kp V       &kp B          &kp N         &kp M          &kp COMMA    &kp DOT      &kp SLASH    &tog QWERTY
-                                    &kp LGUI     &kp LSHIFT  &kp LCTRL      &kp ENTER     &kp SPACE      &kp ESC
-                                                 &kp LGUI    &kp LALT       &mo NAV       &kp DEL
+                                      &kp LGUI   &mo LQWERTY &kp LCTRL      &kp ENTER     &kp SPACE      &mt LCTRL ESC
+                                                 &mo SYM     &kp LALT       &mo NAV       &kp DEL
+      >;
+    };
+
+    LQWERTY {
+      bindings = <
+      &kp LS(GRAVE)      &kp N1       &kp N2     &kp N3       &kp N4        &kp N5         &kp N6        &kp N7         &kp N8           &kp N9       &kp N0           &kp BSPC
+      &lt NAV LS(TAB)    &kp LS(Q)    &kp LS(W)  &kp LS(E)    &kp LS(R)     &kp LS(T)      &kp LS(Y)     &kp LS(U)      &kp LS(I)        &kp LS(O)    &kp LS(P)        &kp LS(MINUS)
+      &mo SYM            &kp LS(A)    &kp LS(S)  &kp LS(D)    &kp LS(F)     &kp LS(G)      &kp LS(H)     &kp LS(J)      &kp LS(K)        &kp LS(L)    &kp LS(SEMI)     &kp LS(SQT)
+      &kp LSHIFT         &kp LS(Z)    &kp LS(X)  &kp LS(C)    &kp LS(V)     &kp LS(B)      &kp LS(N)     &kp LS(M)      &kp LS(COMMA)    &kp LS(DOT)  &kp LS(SLASH)    &tog QWERTY
+                                      &trans     &trans       &trans        &trans         &trans        &trans
+                                                 &trans       &trans        &trans         &trans
       >;
     };
   };
