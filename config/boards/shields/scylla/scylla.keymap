@@ -75,8 +75,8 @@
       &lt NAV TAB     &kp Q    &kp W  &kp F       &kp P         &kp B           &kp J         &kp L          &kp U        &kp Y        &kp SEMI     &kp MINUS
       &mo SYM         &kp A    &kp R  &kp S       &kp T         &kp G           &kp M         &kp N          &kp E        &kp I        &kp O        &kp SQT
       &mo LCOLEMAK    &kp Z    &kp X  &kp C       &kp D         &kp V           &kp K         &kp H          &kp COMMA    &kp DOT      &kp SLASH    &none
-                                      &kp LGUI    &mo LCOLEMAK  &kp LCTRL       &kp ENTER     &kp SPACE      &kp ESC
-                                                  &kp LSHIFT    &kp LALT        &mo NAV       &kp DEL
+                                      &kp LGUI    &mo LCOLEMAK  &kp ENTER       &kp SPACE     &kp LSHIFT     &lt NAV ESC
+                                                  &kp LCTRL     &kp LALT        &mo NAV       &kp DEL
       >;
     };
 
@@ -88,8 +88,8 @@
       &lt NAV LS(TAB)  &kp LS(Q)   &kp LS(W)   &kp LS(F)      &kp LS(P)       &kp LS(B)       &kp LS(J)     &kp LS(L)      &kp LS(U)      &kp LS(Y)    &kp LS(SEMI)   &kp LS(MINUS)
       &mo SYM          &kp LS(A)   &kp LS(R)   &kp LS(S)      &kp LS(T)       &kp LS(G)       &kp LS(M)     &kp LS(N)      &kp LS(E)      &kp LS(I)    &kp LS(O)      &kp LS(SQT)
       &trans           &kp LS(Z)   &kp LS(X)   &kp LS(C)      &kp LS(D)       &kp LS(V)       &kp LS(K)     &kp LS(H)      &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &none
-                                   &kp LGUI    &trans         &kp LCTRL       &kp ENTER       &kp SPACE     &kp ESC
-                                               &kp LSHIFT     &kp LALT        &mo NAV         &kp DEL
+                                   &kp LGUI    &trans         &kp ENTER       &kp SPACE       &kp LSHIFT    &lt NAV ESC
+                                               &kp LCTRL      &kp LALT        &kp LCTRL       &kp DEL
       >;
     };
 
