@@ -110,8 +110,8 @@
       &trans          &none         &wpf          &kp C_BRI_DN   &kp C_BRI_UP  &kp C_VOL_UP      &screenshot        &none          &kp UP         &none            &none        &none
       &trans          &none         &kp C_PREV    &kp C_PP       &kp C_NEXT    &kp C_VOL_DN      &capture_screen    &kp LEFT       &kp DOWN       &kp RIGHT        &none        &none
       &none           &none         &wpl          &wpc           &wpr          &kp K_MUTE        &none              &none          &none          &none            &none        &none
-                                                  &bootloader    &trans        &none             &none              &none          &bootloader
-                                                                 &trans        &trans            &trans             &trans
+                                                  &trans         &trans        &none             &none              &none          &trans
+                                                                 &bootloader   &trans            &trans             &bootloader
       >;
     };
 
