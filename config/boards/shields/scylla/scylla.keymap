@@ -3,9 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define COLEMAK 0
-#define LCOLEMAK 1
-#define SYM 2
-#define NAV 3
+#define SYM 1
+#define NAV 2
 
 #define AS(keycode) &as LS(keycode) keycode
 
@@ -70,35 +69,22 @@
 
     COLEMAK {
       bindings = <
-      &kp GRAVE       &kp EXCL &kp AT &kp HASH    &kp DLLR      &kp PRCNT       &kp CARET     &kp AMPS       &kp STAR     &kp LPAR     &kp RPAR     &kp BSPC
+      &kp GRAVE       &kp N1   &kp N2 &kp N3      &kp N4        &kp N5          &kp N6        &kp N7         &kp N8       &kp N9       &kp N0       &kp BSPC
       &lt NAV TAB     &kp Q    &kp W  &kp F       &kp P         &kp B           &kp J         &kp L          &kp U        &kp Y        &kp SEMI     &kp MINUS
       &mo SYM         &kp A    &kp R  &kp S       &kp T         &kp G           &kp M         &kp N          &kp E        &kp I        &kp O        &kp SQT
       &kp LSHIFT      &kp Z    &kp X  &kp C       &kp D         &kp V           &kp K         &kp H          &kp COMMA    &kp DOT      &kp SLASH    &none
-                                      &kp LGUI    &mo LCOLEMAK  &kp LCTRL       &kp ENTER     &kp SPACE      &mt LSHIFT ESC
+                                      &kp LGUI    &mo LSHIFT    &kp LCTRL       &kp ENTER     &kp SPACE      &mt LCTRL ESC
                                                   &mo SYM       &kp LALT        &mo NAV       &kp DEL
-      >;
-    };
-
-    // Custom layer to have the "illusion" that the LSHIFT triggers the numbers on the top row;
-    // so that we can keep the symbols on the bottom layer.
-    LCOLEMAK {
-      bindings = <
-      &kp LS(GRAVE)    &kp N1      &kp N2      &kp N3         &kp N4          &kp N5          &kp N6        &kp N7         &kp N8         &kp N9       &kp N0         &kp BSPC
-      &lt NAV LS(TAB)  &kp LS(Q)   &kp LS(W)   &kp LS(F)      &kp LS(P)       &kp LS(B)       &kp LS(J)     &kp LS(L)      &kp LS(U)      &kp LS(Y)    &kp LS(SEMI)   &kp LS(MINUS)
-      &mo SYM          &kp LS(A)   &kp LS(R)   &kp LS(S)      &kp LS(T)       &kp LS(G)       &kp LS(M)     &kp LS(N)      &kp LS(E)      &kp LS(I)    &kp LS(O)      &kp LS(SQT)
-      &trans           &kp LS(Z)   &kp LS(X)   &kp LS(C)      &kp LS(D)       &kp LS(V)       &kp LS(K)     &kp LS(H)      &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &none
-                                   &trans      &trans         &trans          &trans          &trans        &trans
-                                               &trans         &trans          &trans          &trans
       >;
     };
 
     SYM {
       bindings = <
       &kp GRAVE     &kp EXCL &kp AT &kp HASH   &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp STAR       &kp LPAR     &kp RPAR      &kp BSPC
-      &none         &none    &none  &none      &none       &none            &kp TILDE     &kp LS(LBKT)   &kp LS(RBKT)   &kp BSLH     &kp LS(SEMI)  &kp MINUS
+      &none         &none    &none  &none      &none       &none            &kp TILDE     &kp LS(LBKT)   &kp LS(RBKT)        &kp LS(SEMI)  &kp MINUS
       &trans        &none    &none  &none      &none       &none            &kp GRAVE     &kp LBKT       &kp RBKT       &kp PIPE     &none         &kp SQT
       &trans        &none    &none  &none      &none       &none            &trans        &kp EQUAL      &kp LS(COMMA)  &kp LS(DOT)  &none         &none
-                                    &trans     &kp LSHIFT  &trans           &trans        &trans         &trans
+                                    &trans     &trans      &trans           &trans        &trans         &trans
                                                &trans      &trans           &trans        &trans
       >;
     };
