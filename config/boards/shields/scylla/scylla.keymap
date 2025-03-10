@@ -8,6 +8,10 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
+&lt {
+  tapping-term-ms = <100>;
+};
+
 / {
   behaviors {
     as: auto_shift {
@@ -34,10 +38,6 @@
     )
   };
 
-  &mt {
-    tapping-term-ms = <100>;
-  };
-
   keymap {
     compatible = "zmk,keymap";
 
@@ -47,7 +47,7 @@
       &lt NAV TAB             &kp Q    &kp W  &kp F       &kp P         &kp B           &kp J         &kp L          &kp U        &kp Y        &kp SEMI     &kp MINUS
       &mo SYM                 &kp A    &kp R  &kp S       &kp T         &kp G           &kp M         &kp N          &kp E        &kp I        &kp O        &kp SQT
       &kp LS(LC(LA(LGUI)))    &kp Z    &kp X  &kp C       &kp D         &kp V           &kp K         &kp H          &kp COMMA    &kp DOT      &kp SLASH    &kp LS(LC(LA(LGUI)))
-                                                   &kp LGUI    &kp LSHIFT    &kp LCTRL       &kp ENTER       &kp SPACE      &mt SYM ESC
+                                                   &kp LGUI    &kp LSHIFT    &kp LCTRL       &kp ENTER       &kp SPACE      &lt SYM ESC
                                                                &mo SYM       &kp LALT        &kp NAV       &kp DEL
       >;
     };
